@@ -20,12 +20,16 @@ const audioPlayer: AudioPlayer = {
     }
 }
 
+
+
+
+// ##### destructuring objects #####
+
 const song = 'New Song';
 
 const {song: anotherSong, songDuration: duration, details 
                                                 // details: {author}    
                                                             } = audioPlayer;
-
 const { author } = details
 
 // console.log('Song: ', audioPlayer.song);
@@ -36,5 +40,12 @@ console.log('Duration ', duration);
 console.log('Author ', author)
 
 
+
+
+// ##### destructuring arrays #####
+
+const [ , , Goku = 'Not Found' ]: string[] = [ 'Vegeta', 'Trunks'];
+
+console.error('Personaje 3:', Goku)
 
 export {}
