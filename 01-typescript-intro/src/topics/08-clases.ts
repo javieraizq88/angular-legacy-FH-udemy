@@ -3,26 +3,41 @@ export class Person {
     // private address: string;
 
     constructor(
-        public name: string,
+        public firstName: string,
+        public lastName: string,
         private address: string = 'No address'
     ) { }
 }
 
 
-export class Hero extends Person {
+// export class Hero extends Person {
 
+//     constructor(
+//         public alterEgo: string,
+//         public age: number,
+//         public realName: string,
+
+//     ) {
+//         // fx q trae el constructor del padre ---> Person
+//         // agrega la fx realname para que no salga el error
+//         super( realName, 'New york' )
+//     }
+// }
+
+export class Hero {
+
+    // public person: Person;
     constructor(
         public alterEgo: string,
         public age: number,
         public realName: string,
-
+        public person: Person,
     ) {
-        // fx q trae el constructor del padre ---> Person
-        // agrega la fx realname para que no salga el error
-        super( realName, 'New york' )
+        // this.person = new Person(realName)
     }
 }
 
-const ironman = new Hero('ironman', 45, 'Tony');
+const tony = new Person('Tony', 'stark' ,'New York');
+const ironman = new Hero('ironman', 45, 'Tony', tony);
 
 console.log(ironman)
