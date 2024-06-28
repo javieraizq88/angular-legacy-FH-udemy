@@ -7,7 +7,6 @@ import { ListComponent } from './list/list.component';
   declarations: [
     HeroComponent,
     ListComponent,
-
   ],
   imports: [
     CommonModule
